@@ -1,0 +1,7 @@
+.ordersPageDesktopChild {
+  position: relative;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-gainsboro);
+  width: 1072px;
+  height: 522px;
+}

@@ -1,0 +1,26 @@
+.findNearMe {
+  position: relative;
+}
+.yourCurrentLocation {
+  position: relative;
+  font-size: var(--font-size-31xl);
+}
+.ordersPageDesktop {
+  position: relative;
+  background-color: var(--color-whitesmoke);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 1029px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 73px 184px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 29px;
+  text-align: left;
+  font-size: var(--font-size-77xl);
+  color: var(--color-black);
+  font-family: var(--font-abeezee);
+}

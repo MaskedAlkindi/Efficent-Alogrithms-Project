@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --font-abeezee: ABeeZee;
+
+  /* font sizes */
+  --font-size-31xl: 50px;
+  --font-size-77xl: 96px;
+
+  /* Colors */
+  --color-whitesmoke: #f3f3f3;
+  --color-gainsboro: #d9d9d9;
+  --color-black: #000;
+
+  /* border radiuses */
+  --br-3xs: 10px;
+}

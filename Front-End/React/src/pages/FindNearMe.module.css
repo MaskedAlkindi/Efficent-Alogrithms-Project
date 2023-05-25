@@ -1,0 +1,136 @@
+.findNearMe1 {
+  position: absolute;
+  top: 73px;
+  left: 418px;
+  font-size: var(--font-size-77xl);
+  text-align: left;
+}
+.electric {
+  margin: 0;
+}
+.electricStations {
+  position: absolute;
+  top: 419px;
+  left: 21px;
+  display: inline-block;
+  width: 233px;
+  height: 122px;
+}
+.foodPlaces,
+.gasStations,
+.hospitals,
+.hotels {
+  position: absolute;
+  top: 435px;
+  left: 1208px;
+  display: inline-block;
+  width: 181px;
+  height: 61px;
+}
+.foodPlaces,
+.gasStations,
+.hospitals {
+  top: 419px;
+  left: 895px;
+  width: 233px;
+  height: 122px;
+}
+.gasStations,
+.hospitals {
+  left: 604px;
+}
+.hospitals {
+  top: 434px;
+  left: 319px;
+}
+.findNearMeChild {
+  position: absolute;
+  top: 766px;
+  left: 32px;
+  border-radius: 20px;
+  background-color: #cacaca;
+  filter: blur(4px);
+  width: 1383px;
+  height: 775px;
+}
+.findNearMeChild1,
+.findNearMeChild2,
+.findNearMeInner,
+.findNearMeItem,
+.rectangleDiv {
+  position: absolute;
+  top: 239px;
+  left: 47px;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-gainsboro);
+  width: 180px;
+  height: 166px;
+}
+.findNearMeChild1,
+.findNearMeChild2,
+.findNearMeInner,
+.rectangleDiv {
+  left: 633px;
+}
+.findNearMeChild1,
+.findNearMeChild2,
+.rectangleDiv {
+  left: 921px;
+}
+.findNearMeChild1,
+.findNearMeChild2 {
+  left: 1209px;
+}
+.findNearMeChild2 {
+  left: 345px;
+}
+.brand1Icon,
+.hospitalBuildings1Icon {
+  position: absolute;
+  top: 265px;
+  left: 82px;
+  width: 111px;
+  height: 115px;
+  object-fit: cover;
+}
+.hospitalBuildings1Icon {
+  top: 245px;
+  left: 358px;
+  width: 154px;
+  height: 154px;
+}
+.cutlery1Icon,
+.gasStation1Icon,
+.hotel1Icon {
+  position: absolute;
+  top: 260px;
+  left: 661px;
+  width: 125px;
+  height: 124px;
+  object-fit: cover;
+}
+.cutlery1Icon,
+.hotel1Icon {
+  top: 257px;
+  left: 952px;
+  width: 118px;
+  height: 130px;
+}
+.hotel1Icon {
+  top: 250px;
+  left: 1226px;
+  width: 144px;
+  height: 144px;
+}
+.findNearMe {
+  position: relative;
+  background-color: var(--color-whitesmoke);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 2053px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-31xl);
+  color: var(--color-black);
+  font-family: var(--font-abeezee);
+}
