@@ -69,6 +69,7 @@ const MapComponent: React.FC = () => {
   const [startLocation, setStartLocation] = useState<number | null>(null);
   const [endLocation, setEndLocation] = useState<number | null>(null);
   const [path, setPath] = useState<Position[]>([]);
+  const [popupMessage, setPopupMessage] = useState<string | null>(null);
 
   const handleClick = async () => {
     if (startLocation !== null && endLocation !== null) {
@@ -81,6 +82,12 @@ const MapComponent: React.FC = () => {
       setPath(pathLocations);
       setStartLocation(null);
       setEndLocation(null);
+
+      // Compute and set the popup message
+      const startName = locations.find(loc => loc.id === startLocation)!.name;
+      const endName = locations.find(loc => loc.id === endLocation)!.name;
+      const pathNames = pathIds.map(id => locations.find(loc => loc.id === id)!.name);
+      setPopupMessage(`The shortest path from ${startName} to ${endName} goes through ${pathNames.join(', ')}.`);
     }
   }
 
@@ -113,7 +120,7 @@ const MapComponent: React.FC = () => {
             <Popup>
               <div style={{ textAlign: 'center' }}>
                 <h2>{location.name}</h2>
-                <p>{location.type}</p>
+                <p>{location.type} {location.id}</p>
               </div>
             </Popup>
           </Marker>
@@ -126,6 +133,7 @@ const MapComponent: React.FC = () => {
         {startLocation === null && 'Select a start location...'}
         {startLocation !== null && endLocation === null && 'Select an end location...'}
         {startLocation !== null && endLocation !== null && 'Click "Show Nearest Path" to view the path.'}
+        {popupMessage && <div className="map-popup">{popupMessage}</div>}
       </div>
       <button onClick={handleClick} className="map-button">Show Nearest Path</button>
     </div>
