@@ -82,8 +82,6 @@ def mod_dijk(adj: list[list[tuple]], s: int, e: int):
                 s = i
     if not found:
         return -1
-
-    # Not dijsktra
     while parent[e] != -1:
         path.append(e + 1)
         e = parent[e]

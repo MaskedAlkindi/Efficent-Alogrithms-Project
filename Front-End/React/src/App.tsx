@@ -4,9 +4,7 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
-import FindNearMe from "./pages/FindNearMe";
-import OrdersPageDesktop from "./pages/OrdersPageDesktop";
-import TestingPage from "./pages/testingpage"
+import Mainpage from "./pages/Mainpage"
 import { useEffect } from "react";
 
 function App() {
@@ -29,15 +27,6 @@ function App() {
         title = "";
         metaDescription = "";
         break;
-      case "/orders-page-desktop":
-        title = "";
-        metaDescription = "";
-        break;
-
-        case "/test":
-          title = "";
-          metaDescription = "";
-          break;
     }
 
     if (title) {
@@ -56,9 +45,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<OrdersPageDesktop />} />
-      <Route path="/FindNearMe" element={<FindNearMe />} />
-      <Route path="/test" element={<TestingPage />} />
+      <Route path="/" element={<Mainpage />} />
     </Routes>
   );
 }

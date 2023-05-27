@@ -19,11 +19,12 @@ for _, row in roads_df.iterrows():
     node2 = pois_df.iloc[row['VertexB'] - 1]['Name']
     G.add_edge(node1, node2)
 
-# Get positions of nodes
-pos = nx.get_node_attributes(G, 'pos')
+# Get positions of nodes using spring layout with larger scale
+pos = nx.spring_layout(G, scale=2)
 
-# Draw the graph
-nx.draw(G, pos, with_labels=True, node_size=30, node_color='blue', edge_color='gray')
+# Draw the graph with larger node size, smaller font size, and more spacing
+plt.figure(figsize=(10, 10))  # Adjust the figure size as per your preference
+nx.draw(G, pos, with_labels=True, node_size=100, node_color='red', edge_color='gray', font_size=8)
 
 # Show the graph
 plt.show()
