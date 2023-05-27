@@ -16,52 +16,50 @@ interface Location {
 }
 
 const locations: Location[] = [
-  { id: 2, name: 'PowerZone', type: 'Electric Stations', position: [23.6105, 58.5408] },
-  { id: 3, name: 'MediCare Hospital', type: 'Hospitals', position: [23.5880, 58.3830] },
-  { id: 4, name: 'FuelStop', type: 'Gas Stations', position: [23.6101, 58.4336] },
-  { id: 5, name: 'Tasty Bites', type: 'Food Places', position: [23.6176, 58.5922] },
-  { id: 6, name: 'StarLux Inn', type: 'Hotels', position: [23.5820, 58.4259] },
-  { id: 7, name: 'EcoCharge', type: 'Electric Stations', position: [23.5969, 58.4823] },
-  { id: 8, name: 'QuickFuel', type: 'Gas Stations', position: [23.6139, 58.5576] },
-  { id: 9, name: 'HealthFirst Medical Center', type: 'Hospitals', position: [23.6071, 58.3891] },
-  { id: 10, name: 'Foodie Haven', type: 'Food Places', position: [23.5949, 58.4112] },
-  { id: 11, name: 'Desert Oasis Resort', type: 'Hotels', position: [23.6096, 58.4490] },
-  { id: 12, name: 'Sunshine Charging', type: 'Electric Stations', position: [23.6087, 58.4316] },
-  { id: 13, name: 'Oceanview Hospital', type: 'Hospitals', position: [23.6119, 58.5732] },
-  { id: 14, name: 'QuickGas', type: 'Gas Stations', position: [23.5934, 58.4378] },
-  { id: 15, name: 'Flavor Junction', type: 'Food Places', position: [23.6174, 58.4125] },
-  { id: 16, name: 'Harbor Inn', type: 'Hotels', position: [23.6003, 58.3879] },
-  { id: 17, name: 'EcoPower', type: 'Electric Stations', position: [23.6052, 58.5327] },
-  { id: 18, name: 'SpeedyFuel', type: 'Gas Stations', position: [23.6229, 58.4103] },
-  { id: 19, name: 'Healing Haven', type: 'Hospitals', position: [23.5867, 58.4441] },
-  { id: 20, name: 'Cuisine Delight', type: 'Food Places', position: [23.6039, 58.5521] },
-  { id: 21, name: 'Seaside Resort', type: 'Hotels', position: [23.5808, 58.4036] },
-  { id: 22, name: 'EnergyCharge', type: 'Electric Stations', position: [23.5958, 58.4097] },
-  { id: 23, name: 'Royal Hospital', type: 'Hospitals', position: [23.6124, 58.4293] },
-  { id: 24, name: 'PetrolZone', type: 'Gas Stations', position: [23.6013, 58.4548] },
-  { id: 25, name: 'Gourmet Delight', type: 'Food Places', position: [23.6112, 58.5341] },
-  { id: 26, name: 'Harmony Suites', type: 'Hotels', position: [23.5963, 58.4109] },
-  { id: 27, name: 'EcoPower', type: 'Electric Stations', position: [23.5137, 58.3865] },
-  { id: 28, name: 'FastFuel', type: 'Gas Stations', position: [23.5935, 58.4137] },
-  { id: 29, name: 'LifeCare Medical Center', type: 'Hospitals', position: [23.6108, 58.4339] },
-  { id: 30, name: 'Culinary Haven', type: 'Food Places', position: [23.6099, 58.4194] },
-  { id: 31, name: 'Coastal Retreat', type: 'Hotels', position: [23.6019, 58.4282] },
-];
+{ id: 1, name: 'Sohar Hospital', type: 'Hospitals', position: [24.3643, 56.7430] },
+{ id: 2, name: 'Salalah Public Hospital', type: 'Hospitals', position: [17.0151, 54.0924] },
+{ id: 3, name: 'Nizwa Hospital', type: 'Hospitals', position: [22.9171, 57.5362] },
+{ id: 4, name: 'Shell Oman - Al Maha Petroleum', type: 'Gas Stations', position: [23.5859, 58.4059] },
+{ id: 5, name: 'Oman Oil Marketing Company', type: 'Gas Stations', position: [23.6105, 58.5876] },
+{ id: 6, name: 'Bimmah Sinkhole Park', type: 'Tourist Spots', position: [23.0375, 59.0716] },
+{ id: 7, name: 'Majlis Al Jinn Cave', type: 'Tourist Spots', position: [22.3760, 59.0946] },
+{ id: 8, name: 'Nizwa Fort', type: 'Tourist Spots', position: [22.9336, 57.5330] },
+{ id: 9, name: 'Al Baleed Archaeological Park', type: 'Tourist Spots', position: [17.0245, 54.1062] },
+{ id: 10, name: 'Al Bustan Palace', type: 'Hotels', position: [23.5701, 58.6089] },
+{ id: 11, name: 'Shangri-La Al Husn Resort & Spa', type: 'Hotels', position: [23.55147, 58.65987] },
+{ id: 12, name: 'Grand Hyatt Muscat', type: 'Hotels', position: [23.6066, 58.5144] },
+{ id: 13, name: 'Kargeen Caffe', type: 'Restaurants', position: [23.5877, 58.4143] },
+{ id: 14, name: 'Bait Al Luban', type: 'Restaurants', position: [23.6008, 58.5879] },
+{ id: 15, name: 'DArcys Kitchen', type: 'Restaurants', position: [23.6114, 58.4802] },
+{ id: 16, name: 'Oman Avenues Mall', type: 'Shopping Malls', position: [23.5910, 58.4154] },
+{ id: 17, name: 'Muscat Grand Mall', type: 'Shopping Malls', position: [23.5853, 58.4157] },
+{ id: 18, name: 'City Centre Muscat', type: 'Shopping Malls', position: [23.600283, 58.24804] },
+{ id: 19, name: 'Rustaq Fort', type: 'Historic Sites', position: [23.3905, 57.4240] },
+{ id: 20, name: 'Jabrin Fort', type: 'Historic Sites', position: [22.9136, 57.2822] },
+{ id: 21, name: 'Bahla Fort', type: 'Historic Sites', position: [22.9645, 57.2994] },
+{ id: 22, name: 'Sultan Qaboos Grand Mosque', type: 'Religious Sites', position: [23.6052, 58.3710] },
+{ id: 23, name: 'Royal Opera House Muscat', type: 'Cultural Sites', position: [23.5854, 58.5873] },
+{ id: 24, name: 'Muscat National Park', type: 'Parks', position: [23.6039, 58.3967] },
+{ id: 25, name: 'Wadi Bani Khalid', type: 'Nature Reserves', position: [22.6277, 58.7038] },
+{ id: 26, name: 'Muscat Gate Museum', type: 'Museums', position: [23.6145, 58.5904] },
+{ id: 27, name: 'National Museum Oman', type: 'Museums', position: [23.6067, 58.5868] },
+{ id: 28, name: 'Oman Oil Marketing Company - Sohar', type: 'Gas Stations', position: [24.3467, 56.7089] },
 
+];
 const customIcon = new Icon({
   iconUrl: pinOutline,
-  iconSize: [38, 95], // size of the icon
+  iconSize: [38, 95],
 });
 
 const startIcon = new Icon({
   iconUrl: pinSharp,
-  iconSize: [38, 95], // size of the icon
+  iconSize: [38, 95],
   iconColor: 'green',
 });
 
 const endIcon = new Icon({
   iconUrl: pinSharp,
-  iconSize: [38, 95], // size of the icon
+  iconSize: [38, 95],
   iconColor: 'red',
 });
 
