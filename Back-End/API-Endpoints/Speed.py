@@ -1,12 +1,6 @@
-from typing import Optional
-from fastapi import FastAPI
-from pydantic import BaseModel
-from fastapi.middleware.cors import CORSMiddleware
-
-##############################Alogrithm Code###############################################
 import csv
 import math
-
+import time
 
 nodeDetails = {}
 
@@ -31,21 +25,12 @@ class nodeC:
         return self.longitude
 
 
-# CC GeeksforGeeks
 def haversine(lat1, lon1, lat2, lon2):
-    # distance between latitudes
-    # and longitudes
     dLat = (lat2 - lat1) * math.pi / 180.0
     dLon = (lon2 - lon1) * math.pi / 180.0
-
-    # convert to radians
     lat1 = (lat1) * math.pi / 180.0
     lat2 = (lat2) * math.pi / 180.0
-
-    # apply formulae
-    a = pow(math.sin(dLat / 2), 2) + pow(math.sin(dLon / 2), 2) * math.cos(
-        lat1
-    ) * math.cos(lat2)
+    a = pow(math.sin(dLat / 2), 2) + pow(math.sin(dLon / 2), 2) * math.cos(lat1) * math.cos(lat2)
     rad = 6371
     c = 2 * math.asin(math.sqrt(a))
     return rad * c
@@ -88,8 +73,6 @@ def mod_dijk(adj: list[list[tuple]], s: int, e: int):
                 s = i
     if not found:
         return -1
-
-    # Not dijsktra
     while parent[e] != -1:
         path.append(e + 1)
         e = parent[e]
@@ -98,8 +81,7 @@ def mod_dijk(adj: list[list[tuple]], s: int, e: int):
     return path, distance
 
 
-
-
+start_time = time.time()
 
 adj_list: list = []
 nodes = []
@@ -107,7 +89,6 @@ with open("addpois.csv", "r") as file:
     csv_file = csv.DictReader(file)
     adj_list = []
     for row in csv_file:
-        # print(dict(row))
         poi1 = nodeC(
             dict(row)["Name"],
             dict(row)["Type"],
@@ -131,28 +112,12 @@ with open("addroads.csv") as file:
         adj_list[vertex1].append((vertex2, distance))
         adj_list[vertex2].append((vertex1, distance))
 
+path, distance = mod_dijk(adj_list, 3, 30)
 
-###########################################################################################################
-app = FastAPI()
-origins = [
-    "http://localhost:3000",  # React app's address
-    # other origins if needed
-]
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-class Item(BaseModel):
-    startnode: int
-    endnode: int
+end_time = time.time()
 
-@app.post("/ShortestPath")
-async def shortest_path(Item: Item):
-    startnode = Item.startnode
-    endnode = Item.endnode
-    path, distance = mod_dijk(adj_list, startnode, endnode)
-    
-    return {"path": path}
+print(path)
+for i in path:
+    print(distance[i - 1])
+
+print(f"The execution time of the program is {end_time - start_time} seconds.")
